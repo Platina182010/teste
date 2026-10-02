@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NIGHT//CORE</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= LOGIN ================= -->
+
+    <div id="login" class="login-screen">
+
+        <div class="scanlines"></div>
+
+        <div class="login-box">
+
+            <div class="logo">
+                BOLA<span>//BOLA</span>
+            </div>
+
+            <div class="system-status">
+                ● SYSTEM ONLINE
+            </div>
+
+            <div class="login-line"></div>
+
+            <h2>ACCESS TERMINAL</h2>
+
+            <p class="subtitle">
+                Enter your access key
+            </p>
+
+            <div class="input-area">
+
+                <span>KEY://</span>
+
+                <input
+                    type="password"
+                    id="senha"
+                    placeholder="ACCESS KEY"
+                >
+
+            </div>
+
+            <button class="login-button" onclick="entrar()">
+                ACCESS SYSTEM
+            </button>
+
+            <p id="erro"></p>
+
+            <div class="login-info">
+                SECURE CONNECTION • ENCRYPTED
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= PAINEL ================= -->
+
+    <div id="painel" class="painel escondido">
+
+        <!-- HEADER -->
+
+        <header>
+
+            <div class="logo">
+                BOLABOLA<span>//GOAT</span>
+            </div>
+
+            <div class="header-center">
+                <span class="red-dot"></span>
+                SYSTEM ONLINE
+            </div>
+
+            <div class="clock" id="clock">
+                00:00:00
+            </div>
+
+        </header>
+
+
+        <main>
+
+            <!-- STATUS -->
+
+            <section class="top-grid">
+
+                <div class="profile card">
+
+                    <div class="avatar">
+                        NC
+                    </div>
+
+                    <div class="profile-info">
+
+                        <span class="label">
+                            USER
+                        </span>
+
+                        <h2>
+                            NIGHT PLAYER
+                        </h2>
+
+                        <p>
+                            ID: 92847102
+                        </p>
+
+                    </div>
+
+                    <div class="access">
+                        ACCESS<br>
+                        <strong>GRANTED</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stats card">
+
+                    <div class="stat">
+                        <span>FPS</span>
+                        <strong id="fps">144</strong>
+                    </div>
+
+                    <div class="stat">
+                        <span>PING</span>
+                        <strong id="ping">32</strong>
+                    </div>
+
+                    <div class="stat">
+                        <span>STATUS</span>
+                        <strong class="green">
+                            ONLINE
+                        </strong>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- COMBAT -->
+
+            <section class="module-section">
+
+                <div class="section-title">
+
+                    <span class="number">
+                        01
+                    </span>
+
+                    <div>
+                        <h3>COMBAT MODULES</h3>
+
+                        <p>
+                            VISUAL SIMULATION
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="module-grid">
+
+                    <div class="module">
+
+                        <div class="module-icon">
+                            🎯
+                        </div>
+
+                        <div class="module-info">
+
+                            <strong>
+                                AIM ASSIST
+                            </strong>
+
+                            <small>
+                                Target assistance
+                            </small>
+
+                        </div>
+
+                        <button
+                            class="switch"
+                            onclick="alternar(this, 'AIM ASSIST')">
+
+                            OFF
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="module">
+
+                        <div class="module-icon">
+                            👁️
+                        </div>
+
+                        <div class="module-info">
+
+                            <strong>
+                                PLAYER ESP
+                            </strong>
+
+                            <small>
+                                Player visualization
+                            </small>
+
+                        </div>
+
+                        <button
+                            class="switch"
+                            onclick="alternar(this, 'PLAYER ESP')">
+
+                            OFF
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="module">
+
+                        <div class="module-icon">
+                            🔫
+                        </div>
+
+                        <div class="module-info">
+
+                            <strong>
+                                RECOIL CONTROL
+                            </strong>
+
+                            <small>
+                                Weapon simulation
+                            </small>
+
+                        </div>
+
+                        <button
+                            class="switch"
+                            onclick="alternar(this, 'RECOIL CONTROL')">
+
+                            OFF
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="module">
+
+                        <div class="module-icon">
+                            ⚡
+                        </div>
+
+                        <div class="module-info">
+
+                            <strong>
+                                TRIGGER MODE
+                            </strong>
+
+                            <small>
+                                Reaction simulation
+                            </small>
+
+                        </div>
+
+                        <button
+                            class="switch"
+                            onclick="alternar(this, 'TRIGGER MODE')">
+
+                            OFF
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- MOVEMENT -->
+
+            <section class="module-section">
+
+                <div class="section-title">
+
+                    <span class="number">
+                        02
+                    </span>
+
+                    <div>
+
+                        <h3>MOVEMENT MODULES</h3>
+
+                        <p>
+                            MOVEMENT SIMULATION
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="module-grid">
+
+                    <div class="module">
+
+                        <div class="module-icon">
+                            🏃
+                        </div>
+
+                        <div class="module-info">
+
+                            <strong>
+                                SPEED
+                            </strong>
+
+                            <small>
+                                Movement simulation
+                            </small>
+
+                        </div>
+
+                        <button
+                            class="switch"
+                            onclick="alternar(this, 'SPEED')">
+
+                            OFF
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="module">
+
+                        <div class="module-icon">
+                            🚀
+                        </div>
+
+                        <div class="module-info">
+
+                            <strong>
+                                JUMP BOOST
+                            </strong>
+
+                            <small>
+                                Jump simulation
+                            </small>
+
+                        </div>
+
+                        <button
+                            class="switch"
+                            onclick="alternar(this, 'JUMP BOOST')">
+
+                            OFF
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- TERMINAL -->
+
+            <section class="terminal card">
+
+                <div class="terminal-header">
+
+                    <span>
+                        TERMINAL://SYSTEM
+                    </span>
+
+                    <span class="terminal-status">
+                        ● LIVE
+                    </span>
+
+                </div>
+
+                <div id="logs" class="terminal-body">
+
+                    <div>
+                        <span class="time">
+                            [00:00:01]
+                        </span>
+
+                        SYSTEM INITIALIZED
+                    </div>
+
+                    <div>
+                        <span class="time">
+                            [00:00:02]
+                        </span>
+
+                        CONNECTION ESTABLISHED
+                    </div>
+
+                    <div>
+                        <span class="time">
+                            [00:00:03]
+                        </span>
+
+                        AWAITING COMMAND...
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- EXECUTAR -->
+
+            <button
+                class="execute"
+                onclick="executar()">
+
+                <span>▶</span>
+
+                EXECUTE CONFIGURATION
+
+            </button>
+
+
+            <!-- PROGRESSO -->
+
+            <div class="progress-area">
+
+                <div class="progress-text">
+
+                    <span>
+                        SYSTEM PROCESS
+                    </span>
+
+                    <span id="progressText">
+                        0%
+                    </span>
+
+                </div>
+
+                <div class="progress-bar">
+
+                    <div
+                        id="progress"
+                        class="progress">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="warning">
+
+                ⚠ VISUAL SIMULATION ONLY —
+                NO GAME MODIFICATION
+
+            </div>
+
+        </main>
+
+
+        <footer>
+
+            NIGHT//CORE
+
+            <span>
+                •
+            </span>
+
+            GAMER TERMINAL
+
+            <span>
+                •
+            </span>
+
+            v2.0.6
+
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
